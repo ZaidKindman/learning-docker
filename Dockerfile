@@ -1,4 +1,15 @@
 FROM node:alpine
-COPY . /app
+
 WORKDIR /app
-CMD node index.js
+
+COPY . .
+
+# RUN at building 
+RUN npm install 
+
+# Expose port
+#EXPOSE 4000
+
+# CMD after built
+CMD ["node", "index.js"]
+#CMD node index.js

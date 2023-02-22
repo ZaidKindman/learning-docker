@@ -2,6 +2,12 @@ FROM node:alpine
 
 WORKDIR /app
 
+# for layer caching run this
+#COPY package.json .
+
+#then run 
+#RUN npm install 
+
 COPY . .
 
 # RUN at building 
